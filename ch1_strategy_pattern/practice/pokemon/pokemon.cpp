@@ -1,17 +1,32 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
 class Pokemon {
 public:
     int str;
     int def;
     int max_hp;
     int cur_hp;
-    Skill skills[4] = {0};
+    Skill skills[4] = {0}; // Pokemon has a Skill
     void set_skill(Skill skill, int skill_id) {
         if (skill_id < 4) {
             skills[skill_id] = skill;
         }
     }
-}
+};
 
+// interface
+class Skill {
+    string name;
+    int injury;
+    int pp;
+    virtual int attack(Pokemon& attack_pkm, Pokemon& attacked_pkm) = 0;
+};
+
+
+// monster1 is a pokemon
 class Monster1 : public Pokemon {
     Monster1() {
         str = 10;
@@ -22,6 +37,7 @@ class Monster1 : public Pokemon {
     }
 };
 
+// monster2 is a pokemon
 class Monster2 : public Pokemon {
     Monster1() {
         str = 20;
@@ -32,15 +48,7 @@ class Monster2 : public Pokemon {
     }
 };
 
-
-// interface
-class Skill {
-    string name;
-    int injury;
-    int pp;
-    virtual int attack(Pokemon& attack_pkm, Pokemon& attacked_pkm) = 0;
-};
-
+// skill_a implements skill
 class SkillA : public Skill {
 public:
     SkillA() {
@@ -57,6 +65,7 @@ public:
     }
 };
 
+// skill_b implements skill
 class SkillB : public Skill {
 public:
     SkillB() {
