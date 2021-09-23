@@ -182,3 +182,8 @@ class MallarDuck extends Duck {
 - 大多數的模式都允許系統局部改變，而不影響其他部分
 - 我們常把系統中，會變動的部分抽出來封裝
 - 模式讓開發者有共同詞彙，提高合作效率
+
+
+# 參考資料
+- 深入淺出設計模式: 介紹設計模式
+- Abstract Class: https://ithelp.ithome.com.tw/articles/10223079
