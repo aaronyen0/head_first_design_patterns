@@ -5,7 +5,7 @@
 - 設計守則: 多用合成，少用繼承
 - 設計理念: 讓系統中的某部分改變不會影響其他部分
 
-## keywords
+# keywords
 - strategy pattern
 - HAS-A
 - IS-A
@@ -187,3 +187,4 @@ class MallarDuck extends Duck {
 # 參考資料
 - 深入淺出設計模式: 介紹設計模式
 - Abstract Class: https://ithelp.ithome.com.tw/articles/10223079
+- 介面定義行為: https://openhome.cc/Gossip/Java/Interface.html
